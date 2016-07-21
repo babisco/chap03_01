@@ -16,11 +16,11 @@ apply plugin: 'spring-boot'
 apply plugin: 'war'
 apply plugin: 'application'
 
-mainClassName = 'com.hybrid.Chap03_01Application'
+mainClassName = 'com.hybrid.Chap0301Application'
 
 
 war {
-	baseName = 'chap03'
+	baseName = 'chap03_01'
 	version = '0.0.1-SNAPSHOT'
 }
 sourceCompatibility = 1.8
@@ -38,6 +38,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	providedRuntime group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.3'
 }
 
 
